@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "目标守护",
+  "version": "0.1.0",
+  "description": "在小红书和抖音网页版中，温和提醒你回到自己设定的目标。",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.xiaohongshu.com/*",
+    "https://www.douyin.com/*"
+  ],
+  "action": {
+    "default_title": "目标守护",
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.xiaohongshu.com/*",
+        "https://www.douyin.com/*"
+      ],
+      "js": [
+        "src/shared/matching.js",
+        "src/content/site-adapter.js",
+        "src/content/content.js"
+      ],
+      "css": ["src/content/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

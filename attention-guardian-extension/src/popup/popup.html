@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>目标守护</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">目标守护</p>
+        <h1>你决定做什么，我帮你守住它。</h1>
+      </header>
+      <section id="goal-view" hidden>
+        <p class="label">当前目标</p>
+        <h2 id="current-goal"></h2>
+        <p id="goal-meta" class="muted"></p>
+        <div class="button-row">
+          <button id="end-goal" class="secondary">结束目标</button>
+          <button id="new-goal">设置新目标</button>
+        </div>
+      </section>
+      <form id="goal-form">
+        <fieldset>
+          <legend>这件事对你来说是</legend>
+          <label><input type="radio" name="goalType" value="want" checked /> 做你最想做的</label>
+          <label><input type="radio" name="goalType" value="need" /> 做你最需要做的</label>
+        </fieldset>
+        <label>模糊目标 <span class="required">*</span><input id="summary" name="summary" maxlength="80" placeholder="例如：查防晒霜" required /></label>
+        <label>细化（选填）<textarea id="details" name="details" maxlength="200" placeholder="例如：适合油痘肌、通勤使用"></textarea></label>
+        <label>完成时间（选填）<input id="deadline" name="deadline" type="datetime-local" /></label>
+        <label class="toggle"><input id="leisure-mode" name="leisureMode" type="checkbox" /><span>这是放松 / 自由浏览，不提醒</span></label>
+        <p class="privacy">页面文字仅在当前网页临时判断，不会保存或上传。</p>
+        <button type="submit">开始守护</button>
+      </form>
+      <button id="clear-data" class="link-button">清除所有本地数据</button>
+      <p id="status" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
