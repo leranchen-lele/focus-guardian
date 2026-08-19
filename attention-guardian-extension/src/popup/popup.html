@@ -10,7 +10,7 @@
     <main>
       <header>
         <p class="eyebrow">目标守护</p>
-        <h1>你决定做什么，我帮你守住它。</h1>
+        <h1>决定好接下来要做的事了吗？</h1>
       </header>
       <section id="goal-view" hidden>
         <p class="label">当前目标</p>
@@ -24,14 +24,14 @@
       <form id="goal-form">
         <fieldset>
           <legend>这件事对你来说是</legend>
-          <label><input type="radio" name="goalType" value="want" checked /> 做你最想做的</label>
-          <label><input type="radio" name="goalType" value="need" /> 做你最需要做的</label>
+          <label><input type="radio" name="goalType" value="want" checked /> 最想做的</label>
+          <label><input type="radio" name="goalType" value="need" /> 最需要做的</label>
         </fieldset>
-        <label>模糊目标 <span class="required">*</span><input id="summary" name="summary" maxlength="80" placeholder="例如：查防晒霜" required /></label>
+        <label>模糊目标 <span class="required">*</span><input id="summary" name="summary" maxlength="80" placeholder="例如：防晒霜" required /></label>
         <label>细化（选填）<textarea id="details" name="details" maxlength="200" placeholder="例如：适合油痘肌、通勤使用"></textarea></label>
         <label>完成时间（选填）<input id="deadline" name="deadline" type="datetime-local" /></label>
-        <label class="toggle"><input id="leisure-mode" name="leisureMode" type="checkbox" /><span>这是放松 / 自由浏览，不提醒</span></label>
-        <p class="privacy">页面文字仅在当前网页临时判断，不会保存或上传。</p>
+        <label class="toggle"><input id="leisure-mode" name="leisureMode" type="checkbox" /><span>放松时间 / 自由浏览，无需弹窗提醒</span></label>
+        <p class="privacy">搜索页面出现的文字和画面仅用于判断是否偏离原本目标，不会保存或上传至插件。</p>
         <button type="submit">开始守护</button>
       </form>
       <button id="clear-data" class="link-button">清除所有本地数据</button>

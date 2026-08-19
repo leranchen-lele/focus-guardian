@@ -6,18 +6,20 @@ header { margin-bottom: 20px; }
 h1 { margin: 0; font-size: 21px; line-height: 1.35; }
 h2 { margin: 0; font-size: 18px; line-height: 1.45; }
 form { display: grid; gap: 14px; }
-fieldset { display: grid; gap: 8px; margin: 0; padding: 0; border: 0; }
+fieldset { display: flex; align-items: center; gap: 8px; margin: 0; padding: 0; border: 0; } 
 legend, label { font-size: 14px; line-height: 1.45; }
-form > label { display: grid; gap: 6px; font-weight: 600; }
-input, textarea { width: 100%; box-sizing: border-box; border: 1px solid #ddcfc0; border-radius: 9px; padding: 9px 10px; color: inherit; background: #fff; font: inherit; font-weight: 400; }
+form > label { display: grid; gap: 6px; font-weight: 600; } 
+input, textarea { width: 100%; box-sizing: border-box; border: 1px solid #ddcfc0; border-radius: 12px; padding: 9px 10px; color: inherit; background: #fff; font: inherit; font-weight: 400; }
 textarea { min-height: 60px; resize: vertical; }
 .required { color: #b74f42; }
-.toggle { display: flex !important; align-items: center; gap: 8px; font-weight: 500 !important; }
+.toggle { display: flex !important; flex-direction: row-reverse; align-items: center; gap: 8px; font-weight: 600 ; }
 .toggle input { width: auto; }
 .privacy, .muted { margin: 0; color: #796d63; font-size: 12px; line-height: 1.5; }
-button { border: 0; border-radius: 10px; padding: 10px 13px; color: #fff; background: #c86d40; cursor: pointer; font: inherit; font-weight: 700; }
+button { border: 0; border-radius: 16px; padding: 10px 13px; color: #fff; background: #c86d40; cursor: pointer; font: inherit; font-weight: 700; }
 .button-row { display: flex; gap: 8px; margin-top: 16px; }
 .button-row button { flex: 1; }
 button.secondary { color: #5e4e43; background: #f1e8de; }
 .link-button { width: 100%; margin-top: 18px; padding: 4px; color: #806a55; background: transparent; font-size: 12px; font-weight: 500; }
 #status { min-height: 18px; margin: 10px 0 0; color: #8a4b2c; font-size: 12px; }
+form label:has(input[name="goalType"]) { display: flex !important;align-items: center !important;gap: 8px;} form label:has(input[name="goalType"]) input[name="goalType"] { width: auto !important; margin: 0; flex: 0 0 auto; }
+form > label:has(.required) {display: block;}form > label:has(.required) .required {display: inline;margin-left: 6px;}form > label:has(.required) input {display: block;margin-top: 6px;}
